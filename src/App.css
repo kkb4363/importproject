@@ -1202,12 +1202,10 @@ a {
   margin: 0 auto 0;
 }
 
-.executive-contents{
+.executive-contents .title {
   display: flex;
   align-items: center;
 }
-
-
 
 .executive-contents .title h2 {
   display: block;

@@ -1,32 +1,36 @@
 import React from 'react';
 import './App.css';
 import $ from "jquery";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 function App(){
       return(
-        <div>  
+         
         <div className="executive-contents">
-          <div className="title"><h2>임원진 소개</h2></div>  
-        <Header> </Header>
+        <div className="title"><h2>임원진 소개</h2><Header/> </div>
+        
+        
         <ZIN></ZIN>
-        <ZONG></ZONG>
-        <YOO></YOO>
-        <ZO></ZO>
-        <CHOI></CHOI>
-        <FOOTER></FOOTER>
-          </div>
-          </div>
+        
+        
+       
+        
+        
+        </div> 
       )
 }
 
 
-
+//헤더 finish
 function Header(){
   return(
 
       <nav>
+
         <div className="menu-button">
-          <p className="fas fa-bars open-menu" onclick={openMenu} ></p>
-          <p className="fas fa-times close-menu" onclick={closeMenu} ></p>
+        <FontAwesomeIcon icon="fa-regular fa-bars" onclick={openMenu} />
+        <FontAwesomeIcon icon="fa-solid fa-xmark" onclick={closeMenu} />
         </div>
         <div className="logo">
           <h1 style={{cursor: 'pointer'}} onclick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
@@ -34,15 +38,18 @@ function Header(){
 
         <div className="topMenu">
           <ul className="topMenu-ul">
+           
             <li><a onclick={OpenSmallMenu(1)}>동아리 <span>▼</span></a>
-              <ul id="SmallMenu1">
+              <ul>
                 <li><a href="<%= process.env.SERVER_HOST %>/executive">임원진</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/indroduce">동아리 소개</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/rule">동아리 규칙</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/meeting">회의록</a></li>
               </ul>
             </li>
+
             <li><a href="<%= process.env.SERVER_HOST %>/project">프로젝트</a></li>
+            
             <li><a onclick="OpenSmallMenu(2)">Education <span>▼</span></a>
               <ul id="SmallMenu2">
                 <li><a href="<%= process.env.SERVER_HOST %>/web">Web</a></li>
@@ -50,17 +57,21 @@ function Header(){
                 <li><a href="<%= process.env.SERVER_HOST %>/dataAnalysis">Data Analysis</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/ai">AI</a></li>
               </ul>
-            </li><li><a href="<%= process.env.SERVER_HOST %>/question">질문 게시판</a></li>
+            </li>
+           
+            <li><a href="<%= process.env.SERVER_HOST %>/question">질문 게시판</a></li>
+         
           </ul>
         </div>
+
       </nav>
   )
 }
 
 function ZIN(){
   return(
-    <div>
-       <div className="executive-cards-container"></div>
+    
+       <div className="executive-cards-container">
     <div className="executive-cards">
       <div className="executive-card-component">
         <a href className="executive-views">
