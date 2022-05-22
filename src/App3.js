@@ -80,12 +80,14 @@ function ZIN(){
       <div className="executive-cards-container">
         <div className="executive-cards">
           <div className="executive-card-component">
+
         <a>
           <img src="../images/m.png" alt="" className="executive-thumbnail" />
           <div className="executive-box">
             <p className="executive-name">진민</p>
           </div>
         </a>
+        
         <div className="executive-github"><a href="https://github.com/Import-hanbat"></a>
         <FontAwesomeIcon icon="fab fa-github" style={{color: 'white', fontSize: '30px'}}/>
         </div>
@@ -266,4 +268,4 @@ function OpenSmallMenu(num){
 
 
 
-export default App;
+export default App3;

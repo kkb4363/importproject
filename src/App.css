@@ -1198,8 +1198,9 @@ a {
 }
 
 .executive-contents {
-  width: 1600px;
+  width: 600px;
   margin: 0 auto 0;
+  
 }
 
 .executive-contents .title {
@@ -1254,7 +1255,7 @@ a {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .executive-contents
@@ -1653,6 +1654,11 @@ a {
     font-size: 30px;
     left: 15px;
     top: 30px;
+  }
+
+  .가로배치{
+    display:inline-block;
+   
   }
 
   .menu-button .open-menu{
