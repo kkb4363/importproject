@@ -268,4 +268,4 @@ function OpenSmallMenu(num){
 
 
 
-export default App3;
+export default App;
