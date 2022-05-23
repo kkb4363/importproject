@@ -8,20 +8,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 function App(){
       return(
          <>
-         <div className="executive-contents">
-        <div className="title"><h2>임원진 소개</h2><Header/> </div>
-        </div>
-
-        <div className='가로배치'>
+          <div className="executive-contents">
+          <div className="title"><h2>임원진 소개</h2><Header/> </div>
+          </div>
           <ZIN></ZIN>
-          
-          
-        </div>
-
-         
+          <FOOTER></FOOTER>
          </>
-        
-        
       )
 }
 
@@ -33,9 +25,10 @@ function Header(){
     <nav>
       
       <div className="menu-button">
-      <FontAwesomeIcon icon={faBars} onclick={openMenu} />
-      <FontAwesomeIcon icon="fa-solid fa-xmark" onclick={closeMenu} />
+      <FontAwesomeIcon icon={'faBars'} onclick={openMenu} />
+      <FontAwesomeIcon icon={'fa-solid fa-xmark'} onclick={closeMenu} />
       </div>
+
       <div className="logo">
         <h1 style={{cursor: 'pointer'}} onclick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
       </div>
@@ -54,7 +47,7 @@ function Header(){
 
           <li><a href="<%= process.env.SERVER_HOST %>/project">프로젝트</a></li>
           
-          <li><a onclick="OpenSmallMenu(2)">Education <span>▼</span></a>
+          <li><a onclick={OpenSmallMenu(2)}>Education <span>▼</span></a>
             <ul id="SmallMenu2">
               <li><a href="<%= process.env.SERVER_HOST %>/web">Web</a></li>
               <li><a href="<%= process.env.SERVER_HOST %>/mobile">Mobile</a></li>
