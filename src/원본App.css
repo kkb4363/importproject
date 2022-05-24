@@ -3,8 +3,9 @@
 
 html,body{
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
+
 body{
     width: 90vw;
     margin: auto;
@@ -41,13 +42,13 @@ header {
   height: 200px;
 }
 nav {
-  width: 100%;
+  width: 200%;
   height: 100px;
-  padding-top: 40px; /*메뉴를 아래로 내리기 위해 */
+  padding-top: 50px; /*메뉴를 아래로 내리기 위해 */
 }
 
 .menu-button{
-  display: block;
+  display: none;
 }
 
 /* Full-width input fields */
@@ -161,7 +162,7 @@ span.pwd {
 }
 
 .logo {
-  margin-left: 5%;
+  margin-left: 10%;
   width: 150px;
   height: 100px;
   float: left;
@@ -181,9 +182,9 @@ span.pwd {
 .topMenu {
   margin-bottom: 100px;
   width: 40%;
-  height: 30px;
+  height: 60px;
   float: right;
-  margin-right: 10%;
+  margin-right: 0%;
 }
 
 .topMenu-ul {
@@ -928,7 +929,6 @@ pre {
 
 a {
   text-decoration: none;
-  
 }
 
 .contents {
@@ -939,6 +939,7 @@ a {
 .contents .title {
   display: flex;
   align-items: center;
+  
 }
 
 .contents .title h2 {
@@ -1199,8 +1200,9 @@ a {
 }
 
 .executive-contents {
-  width: 1600px;
+  width: 600px;
   margin: 0 auto 0;
+  
 }
 
 .executive-contents .title {
@@ -1255,7 +1257,7 @@ a {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .executive-contents
@@ -1463,13 +1465,14 @@ a {
 .executive-contents .title {
   display: flex;
   align-items: center;
+  
 }
 
 .executive-contents .title h2 {
-  display: block;
+  display: inline;
   font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.82em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   color: #83ff5c;
@@ -1656,13 +1659,18 @@ a {
     top: 30px;
   }
 
+  .가로배치{
+    display:inline-block;
+   
+  }
+
   .menu-button .open-menu{
     position: absolute;
   }
   .menu-button .close-menu{
     left: 3px;
     position: absolute;
-    display: block;
+    display: none;
   }
 
 
