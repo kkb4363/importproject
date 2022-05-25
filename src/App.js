@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import $ from "jquery";
-import { FaBars,FaTimes,FaGithub } from "react-icons/fa";
+import { FaBars,FaTimes,FaGithub,FaInstagram,FaFacebook } from "react-icons/fa";
 
 function App(){
     return(
@@ -17,8 +17,8 @@ function Header2(){
     return(
         <nav>
           <div className="menu-button">
-          <FaBars style={{cursor : 'pointer'}}  fontSize={'36px'} onClick={openMenu()}></FaBars>
-          <FaTimes style={{cursor : 'pointer'}} fontSize={'36px'}  onclick={closeMenu()}></FaTimes>
+          <FaBars style={{cursor : 'pointer'}}  fontSize={'30px'} onClick={openMenu()}></FaBars>
+          <FaTimes style={{cursor : 'pointer'}} fontSize={'30px'}  onclick={closeMenu()}></FaTimes>
           </div>
         <div className="logo">
             <h1 style={{cursor: "pointer"}} onclick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
@@ -202,11 +202,11 @@ function FOOTER2(){
   return(
     <div className="footer">
       <div className="sns">
-        <ul className="snss">
-          <li><a href="https://github.com/Import-hanbat"><i style={{color: 'white'}} className="fab fa-github"></i></a></li>
-          <li><a href="https://www.instagram.com/import_hanbat/"><i className="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/Import-110047964872044"><i className="fab fa-facebook"></i></a></li>
-        </ul>
+        <ul className="snss">                          
+          <li><a href="https://github.com/Import-hanbat"> <FaGithub color='white' fontSize={'30px'} ></FaGithub></a></li>
+          <li><a href="https://www.instagram.com/import_hanbat/"> <FaInstagram color='white' fontSize={'30px'}></FaInstagram></a></li>
+          <li><a href="https://www.facebook.com/Import-110047964872044"><FaFacebook color='white' fontSize={'30px'}></FaFacebook></a></li>
+        </ul>           
       </div>
         <div className="copyright">
             <p>Copyright 2022. Import all right reserved.</p>
