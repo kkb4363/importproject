@@ -1367,14 +1367,6 @@ a {
   margin: 0;
 }
 
-.contents
-  .project-cards-container
-  .project-cards
-  .project-card-component
-  .links
-  .link-item {
-    
-}
 
 .contents
   .project-cards-container
@@ -1528,13 +1520,7 @@ a {
    float: left;
    text-align: center;
  }
- .executive-contents
- .executive-cards-container
- .executive-cards
- .executive-card-component
- .executive-box p{
-   
- }
+
 
 .executive-contents
  .executive-cards-container
@@ -1658,11 +1644,12 @@ a {
 
   .menu-button .open-menu{
     position: absolute;
+    display:none;
   }
   .menu-button .close-menu{
     left: 3px;
     position: absolute;
-    display: block;
+    display: none;
   }
 
 

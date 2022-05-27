@@ -17,15 +17,15 @@ function Header2(){
     return(
         <nav>
           <div className="menu-button">
-          <FaBars style={{cursor : 'pointer'}}  fontSize={'30px'} onClick={openMenu()}></FaBars>
-          <FaTimes style={{cursor : 'pointer'}} fontSize={'30px'}  onclick={closeMenu()}></FaTimes>
+          <FaBars className='open-menu'   fontSize={'30px'} onClick={openMenu}></FaBars>
+          <FaTimes className='close-menu'  fontSize={'30px'}  onClick={closeMenu}></FaTimes>
           </div>
         <div className="logo">
-            <h1 style={{cursor: "pointer"}} onclick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
+            <h1 style={{cursor: "pointer"}} onClick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
         </div>
       <div className="topMenu">
           <ul className="topMenu-ul">
-            <li><a onclick={OpenSmallMenu(1)}>동아리 <span>▼</span></a>
+            <li><a onClick={OpenSmallMenu(1)}>동아리 <span>▼</span></a>
               <ul id="SmallMenu1">
                 <li><a href="<%= process.env.SERVER_HOST %>/executive">임원진</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/indroduce">동아리 소개</a></li>
@@ -34,7 +34,7 @@ function Header2(){
               </ul>
             </li>
             <li><a href="<%= process.env.SERVER_HOST %>/project">프로젝트</a></li>
-            <li><a onclick={OpenSmallMenu(2)}>Education <span>▼</span></a>
+            <li><a onClick={OpenSmallMenu(2)}>Education <span>▼</span></a>
               <ul id="SmallMenu2">
                 <li><a href="<%= process.env.SERVER_HOST %>/web">Web</a></li>
                 <li><a href="<%= process.env.SERVER_HOST %>/mobile">Mobile</a></li>
