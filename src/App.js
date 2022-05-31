@@ -52,7 +52,6 @@ function Header2(){
     </nav>
     )
 }
-
 function MAIN(){
     return(
         <div className="executive-contents">
@@ -200,8 +199,6 @@ function MAIN(){
         </div></div></div>
     )
 }
-
-
 function FOOTER2(){
   return(
     <div className="footer">
@@ -220,10 +217,8 @@ function FOOTER2(){
           </div>
       </div>  
   )
-}
-      
-      
-      function openMenu(){
+}    
+function openMenu(){
           $('.topMenu').css('display','block');
           $('.close-menu').css('display','block');
           $('.open-menu').css('display','none');
@@ -231,7 +226,7 @@ function FOOTER2(){
           $('.middle-apply').css('opacity','0.5');
           $('.footer').css('opacity','0.5');
       }
-      function closeMenu(){
+function closeMenu(){
           $('.topMenu').css('display','none');
           $('.topMenu-ul').css('background','none');
           $('.close-menu').css('display','none');
@@ -240,13 +235,10 @@ function FOOTER2(){
           $('.footer').css('opacity','1');
           
       }
-      function OpenSmallMenu(num){
+function OpenSmallMenu(num){
           var result = '#SmallMenu'+num;
           $(result).css('dislay','block');
 
       }
-
-  
-
 
 export default App;
