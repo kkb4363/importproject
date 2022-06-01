@@ -1,34 +1,63 @@
-import React from 'react';
 import './App.css';
 import $ from "jquery";
 import { FaBars,FaTimes,FaGithub,FaInstagram,FaFacebook } from "react-icons/fa"; 
+import React , {useState, useEffect} from 'react';
 //리액트 폰트 어썸 사이트에서 아이콘 사용 : https://react-icons.github.io/react-icons/
 
 function App(){
     return(
         <div>
-        <Header2></Header2>
+        <Header></Header>
         <MAIN></MAIN>
         <FOOTER2></FOOTER2>
         </div>     
     )
 }
 
-function Header2(){
+
+{/* map*/}
+function Header(){
+  
+  function OpenMenu(){
+  $('.topMenu').css('display','block');
+  $('.topMenu-ul').css('background','black');
+  $('.close-menu').css('display','block');
+  $('.open-menu').css('display','none');
+  $('.executive-contents').css('opacity','0.5');
+  $('.footer').css('opacity','0.5');
+  $('.logo').css('opacity','0.5');
+ }
+  function CloseMenu(){
+  $('.topMenu').css('display','none');
+  $('.topMenu-ul').css('background','none');
+  $('.close-menu').css('display','none');
+  $('.open-menu').css('display','block');
+  $('.executive-contents').css('opacity','1');
+  $('.footer').css('opacity','1');
+  $('.logo').css('opacity','1');
+ }
+ 
+ function OpenSmallMenu(num){
+  var result = '#SmallMenu'+num;
+  $(result).css('dislay','block');
+}
+
+useEffect(()=>{
+  CloseMenu()
+},[])
+ 
     return(
         <nav>
           <div className="menu-button">   
-          {/*홈페이지 첫 로딩할때 openmenu, closemenu 두개가 다뜨는 문제가 있다. 
-            => closemenu 한개만 뜨게 설정 해야하는데 하는 방법을 모르겠다.*/}
-          <FaBars className='open-menu'  fontSize={'30px'} onClick={openMenu}></FaBars> 
-          <FaTimes className='close-menu'  fontSize={'30px'}  onClick={closeMenu}></FaTimes>
+          <FaBars className='open-menu'  fontSize={'30px'} onClick={OpenMenu}></FaBars> 
+          <FaTimes className='close-menu'  fontSize={'30px'}  onClick={CloseMenu}></FaTimes>
           </div>
         <div className="logo">
-            <h1 style={{cursor: "pointer"}} onClick="location.href='<%= process.env.SERVER_HOST %>'">IMPORT</h1>
+            <h1 style={{cursor: "pointer"}} onClick={"location.href='<%= process.env.SERVER_HOST %>'"}>IMPORT</h1>
         </div>
       <div className="topMenu">
           <ul className="topMenu-ul">
-            {/*opensmallmenu함수가 정확히 어떻게 작동하는건지 모르겠음.*/}
+          
             <li><a onClick={OpenSmallMenu(1)}>동아리 <span>▼</span></a>
               <ul id="SmallMenu1">
                 <li><a href="<%= process.env.SERVER_HOST %>/executive">임원진</a></li>
@@ -218,27 +247,8 @@ function FOOTER2(){
       </div>  
   )
 }    
-function openMenu(){
-          $('.topMenu').css('display','block');
-          $('.close-menu').css('display','block');
-          $('.open-menu').css('display','none');
-          $('.topMenu-ul').css('background','black');
-          $('.middle-apply').css('opacity','0.5');
-          $('.footer').css('opacity','0.5');
-      }
-function closeMenu(){
-          $('.topMenu').css('display','none');
-          $('.topMenu-ul').css('background','none');
-          $('.close-menu').css('display','none');
-          $('.open-menu').css('display','block');
-          $('.middle-apply').css('opacity','1');
-          $('.footer').css('opacity','1');
-          
-      }
-function OpenSmallMenu(num){
-          var result = '#SmallMenu'+num;
-          $(result).css('dislay','block');
 
-      }
+
+
 
 export default App;

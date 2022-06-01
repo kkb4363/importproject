@@ -12,3 +12,4 @@ $('.test') => class가 test인 걸 찾아주세요.
 $('.topMenu').css('display','block'); => class가 topmenu인걸 찾아서 css.display값을 block으로 바꿔주세요.
 (css는 보통 display: block 이런식인데 jqeury에서는 'display','block'이렇게 씀)
 
+해야할거: openmenu 클릭시 main 함수 내에 css 설정되게 해야함.
